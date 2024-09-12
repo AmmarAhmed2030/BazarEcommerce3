@@ -19,13 +19,14 @@ export default function ProductShare({ urlToShare }) {
       <Modal
         show={openModal}
         onClose={() => setOpenModal(false)}
-        className="bg-black bg-opacity-50 flex items-center justify-center"
+        className="z-50
+        mx-auto max-w-sm sm:max-w-md"
       >
-        <div className="bg-white rounded-lg shadow-lg max-w-md w-full mx-4">
+        <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg  w-full">
           <Modal.Header className="border-b p-4 text-lg font-semibold">
             Share this product with Others
           </Modal.Header>
-          <Modal.Body className="p-4">
+          <Modal.Body>
             <ShareSocial
               url={urlToShare}
               socialTypes={[
